@@ -7,7 +7,7 @@ class Fernery < Formula
 
   # GHC shouldn't be needed on test (https://github.com/orgs/Homebrew/discussions/4284)
   depends_on "ghc@9.2" => [:build, :test]
-  depends_on "haskell-stack" => :build
+  depends_on "haskell-stack" => [:build, :test]
 
   uses_from_macos "zlib"
 
