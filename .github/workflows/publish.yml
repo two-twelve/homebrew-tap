@@ -15,7 +15,7 @@ jobs:
         uses: Homebrew/actions/git-user-config@master
 
       - name: Tap homebrew/core
-        run: brew tap homebrew/core
+        run: brew tap homebrew/core --shallow
 
       - name: Pull bottles
         env:
