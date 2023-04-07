@@ -5,7 +5,8 @@ class Fernery < Formula
   sha256 "f8beffda2888eaa2645efbea2753cb388310ac2f72885c6db00c7dd33fc72a08"
   license "MIT"
 
-  depends_on "ghc@9.2" => :build
+  # GHC shouldn't be needed on test (https://github.com/orgs/Homebrew/discussions/4284)
+  depends_on "ghc@9.2" => [:build, :test]
   depends_on "haskell-stack" => :build
 
   uses_from_macos "zlib"
