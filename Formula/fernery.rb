@@ -8,6 +8,8 @@ class Fernery < Formula
   depends_on "ghc@9.2" => :build
   depends_on "haskell-stack" => :build
 
+  uses_from_macos "zlib"
+
   def install
     stack_args = [
       "--copy-bins",
